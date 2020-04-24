@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html> nonv
+<html> 
   <!--
 
         HTML EXERCISES
@@ -68,6 +68,293 @@
         50) Write a function to remove the table from the page
     -->
 
-  <head> </head>
-  <body></body>
+  <head>
+    <title>Strive School rocks</title> 
+    <style>
+      body 
+      { width: 100%; text-align: center;
+      margin: auto;
+      background-image: url(http://www.naturalbeauty.it/wp-content/uploads/2015/10/background-gradient-2hm7zoq.jpg);
+       }
+
+       h1 {text-align: center;}
+
+       .head {
+         text-align:center;
+         background-color: blanchedalmond;
+         background-position: left;
+         height: 90px;
+         font-size: 70px;
+       }
+
+      table {
+        border: 50px solid aquamarine;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      td {
+        background-color:yellowgreen;
+        font-size: x-large;
+      }
+      
+ /*
+      .button1 {
+        color: lightgrey;
+        background-color: red;
+        padding: 20px;
+        margin: 15px;
+        border-radius: 16%;
+        border-style:inherit;
+        width: 250px;
+        font-size: 30px;
+        font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+        ;
+      }*/
+
+      .buttonAdd2 {
+        color: lightgrey;
+        background-color:royalblue;
+        padding: 20px;
+        margin: 15px;
+        border-radius: 16%;
+        border-style:inherit;
+        width: 250px;
+        font-size: 30px;
+        font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+        ;
+      }
+      
+
+      
+      .buttonRemove {
+        color: lightgrey;
+        background-color:limegreen;
+        padding: 20px;
+        margin: 15px;
+        border-radius: 16%;
+        border-style:inherit;
+        width: 350px;
+        font-size: 20px;
+        font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+        ;
+      }
+
+      .borderClass {
+        border-radius: 10%;
+        border-style:outset;
+      }
+
+      a{
+        color:mintcream;
+      }
+
+      tr {
+        border: 1px solid red;
+        border-style: dotted;
+      }
+
+      td{
+        border: 2px solid green;
+        padding: 5spx;
+        width: 100px;
+        height: 100px;
+      }
+
+      p{
+        margin: 10px;
+      }
+
+      .class {
+        font-size: medium;
+        font-weight: bold;
+      }
+
+      .hiddenContent {
+        display: none;
+      }
+
+
+
+      /*#imageTd {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        background-image: url(https://classicrockreview.files.wordpress.com/2013/05/led-zeppelin-2.jpg)
+      }*/
+      footer {
+        background-color: teal;
+        text-align: center;
+        font-size: 40px;
+      }
+
+    </style>
+  </head>
+  <body>
+    <h1 class="head" onmouseover="changeHeading()" onmouseout="heading()">Heading 1</h1>
+    <div>
+    <ol>
+      <li>a</li>
+      <li>b</li>
+      <li>c</li>
+    </ol>
+  </div>
+    <table class="borderClass">
+      <tr class ="borderClasss">
+        <td>Red</td>
+        <td> <a href="https://www.strive.school"><img src="https://www.w3schools.com/tags/logo_w3s.gif"></a> </td>
+        <td>White</td>
+        <td>Blue</td>
+        <td>Green</td>
+      </tr>
+      <tr>
+        <td colspan="2">Dark Blue</td>
+        <td>Black</td>
+        <td>Yellow</td>
+        <td>Brown</td>
+      </tr>
+      <tr>
+        <td>Magenta</td>
+        <td>Purple</td>
+        <td>Seppia</td>
+        <td>Silver</td>
+        <td>Grey</td>
+      </tr>
+      <tr>
+        <td>Orange</td>
+        <td>Beige</td>
+        <td>Light Blue</td>
+        <td>Pink</td>
+        <td>Blue navy</td>
+      </tr>
+    </table>
+
+    <div>
+    <!-- <input type="button" id="button" onclick="extraRo()" value="Click to add row"> </input> -->
+    <button onclick="extraRow()" class ="button1">Click to add row</button>
+    </div>
+
+    <div>
+    <!-- <input type="button" id="buttoncolor" onclick="changeColorLinks()" value="Click to change color of links"> </input> -->
+   
+    <button onclick="changeColorLinks()" class ="buttonAdd2">Click me to change colors</button>
+    </div>
+
+    <hr size="5" color="red">
+
+
+    <div id="ul1">
+      <p>Paragrafo</p>
+      <ul id="ul2" >
+        <li id="ul3">primo</li>
+        <li>secondo</li>
+        <li>terzo</li>
+      </ul>
+      <button onclick="removeItem()" class ="buttonRemove">Click me remove item</button>
+    </div>
+    <footer>
+      <p>Footer</p> 
+      <p>Informazioni di contatto</p>
+      <a class="link" href="https://www.strive.school">Visit Strive School</a>
+    </footer>
+
+    <script>
+
+     
+     function removeItem (){
+      let d = document.getElementById("ul1");
+      let d_nested = document.getElementById("ul2");
+      let throwawayNode = d.removeChild(d_nested);
+       }
+
+      let x = "John"
+      let y = "Doe"
+      console.log(x + '<>' + y)
+
+      let myObject = {
+        name: "John",
+        surname: "Doe",
+        email: "john.doe@strive.school"
+      }
+      console.log(myObject)
+      
+      delete myObject.email
+      console.log(myObject)
+
+      let arrayWithStrings = ["Pop", "Rock", "Grunge", "Metal", 
+      "Blues", "Jazz", "Techno", "Classic", "Dance", "Speed"  ]
+      console.log(arrayWithStrings)
+
+
+      let myArray = []
+      let arrayMax = 100;
+      let maxLength = arrayMax + 1;
+      for (var i = 0; i < arrayMax; i++) {
+        myArray.push(Math.floor(Math.random()*maxLength));
+      }
+      console.log(myArray)
+
+
+      console.log(Math.max(...myArray))//SPREAD OPERATOR
+      console.log(Math.min(...myArray))//SPREAD OPERATOR
+
+     
+      /*
+
+      let arrayWithRandomNumbers = []
+      for (var i=0; t=100; i++) {
+      arrayWithRandomNumbers.push(Math.round(Math.random() * t))
+      }
+      console.log( );
+      /*let maxNumbers = 100;
+      for( i = 0; i = maxNumbers; i++){
+      var r = Math.floor(Math.random() * 100) + 1;
+      console.log(arr);
+
+      var arr = [];
+while(arr.length < 8){
+    var r = Math.floor(Math.random() * 100) + 1;
+    if(arr.indexOf(r) === -1) arr.push(r);
+}
+console.log(arr);*/
+
+    //---------------------------------- DOM -----------------------------------
+    document.querySelector('#container')
+    document.querySelector('td')
+
+    function heading(){
+      let firstHeading = "Heading 1"
+      document.querySelector('h1').innerHTML= firstHeading
+    }
+
+    function changeHeading() {
+      let newHeading = "This is the new heading"
+      document.querySelector('h1').innerHTML= newHeading
+    }
+
+    function extraRo() {
+      let table = document.querySelector('.borderClass')
+      let newRow = document.createElement('tr')
+      newRow.innerText = "New created row"
+      newRow.style.color = "red"
+      table.appendChild('newRow')
+    
+    }
+
+    window.onload = function (){
+      let addClass = document.querySelector('tr')
+      addClass.classList.add('test')
+    }
+
+    
+     function changeColorLinks() {
+       let changeColor = document.querySelector('.link')
+       changeColor.style.backgroundColor ="red"
+    }
+
+
+
+
+ 
+    </script>
+  </body>
 </html>
