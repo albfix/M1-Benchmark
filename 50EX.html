@@ -77,14 +77,10 @@
       background-image: url(http://www.naturalbeauty.it/wp-content/uploads/2015/10/background-gradient-2hm7zoq.jpg);
        }
 
-       h1 {text-align: center;}
-
-       .head {
-         text-align:center;
-         background-color: blanchedalmond;
-         background-position: left;
-         height: 90px;
+       h1 {text-align: center;
+        height: 90px;
          font-size: 70px;
+         background-color: blanchedalmond;
        }
 
       table {
@@ -148,6 +144,11 @@
         color:mintcream;
       }
 
+      li {
+        font-size: 30px;
+        text-align: justify;
+      }
+
       tr {
         border: 1px solid red;
         border-style: dotted;
@@ -173,6 +174,12 @@
         display: none;
       }
 
+      #listP {
+        color:midnightblue;
+        font-size: 60px;
+        
+      }
+
 
 
       /*#imageTd {
@@ -193,9 +200,9 @@
     <h1 class="head" onmouseover="changeHeading()" onmouseout="heading()">Heading 1</h1>
     <div>
     <ol>
-      <li>a</li>
-      <li>b</li>
-      <li>c</li>
+      <li>HTML</li>
+      <li>CSS</li>
+      <li>JS</li>
     </ol>
   </div>
     <table class="borderClass">
@@ -228,6 +235,8 @@
       </tr>
     </table>
 
+
+
     <div>
     <!-- <input type="button" id="button" onclick="extraRo()" value="Click to add row"> </input> -->
     <button onclick="extraRow()" class ="button1">Click to add row</button>
@@ -243,11 +252,11 @@
 
 
     <div id="ul1">
-      <p>Paragrafo</p>
+      <p id="listP">Basic List</p>
       <ul id="ul2" >
-        <li id="ul3">primo</li>
-        <li>secondo</li>
-        <li>terzo</li>
+        <li id="ul3">First</li>
+        <li>Second</li>
+        <li>Third</li>
       </ul>
       <button onclick="removeItem()" class ="buttonRemove">Click me remove item</button>
     </div>
@@ -286,8 +295,8 @@
 
 
       let myArray = []
-      let arrayMax = 100;
-      let maxLength = arrayMax + 1;
+      var arrayMax = 100;
+      var maxLength = arrayMax + 1;
       for (var i = 0; i < arrayMax; i++) {
         myArray.push(Math.floor(Math.random()*maxLength));
       }
@@ -297,8 +306,19 @@
       console.log(Math.max(...myArray))//SPREAD OPERATOR
       console.log(Math.min(...myArray))//SPREAD OPERATOR
 
+      let arrayOfArrays =[[],[]]
+      let pushNewArray = function() {
+        for (var i = 0; i < arrayOfArrays; i++) {         
+         arrayOfArrays[0].push(Math.floor(Math.random()*maxLength))
+        }
+    
+      }
+      console.log(arrayOfArrays)
      
-      /*
+
+
+     
+      /* PREVIOUS TEST
 
       let arrayWithRandomNumbers = []
       for (var i=0; t=100; i++) {
@@ -311,11 +331,11 @@
       console.log(arr);
 
       var arr = [];
-while(arr.length < 8){
-    var r = Math.floor(Math.random() * 100) + 1;
-    if(arr.indexOf(r) === -1) arr.push(r);
-}
-console.log(arr);*/
+      while(arr.length < 100){
+      var r = Math.floor(Math.random() * 100) + 1;
+      if(arr.indexOf(r) === -1) arr.push(r);
+      }
+      console.log(arr);*/
 
     //---------------------------------- DOM -----------------------------------
     document.querySelector('#container')
